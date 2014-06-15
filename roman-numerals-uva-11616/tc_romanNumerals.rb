@@ -12,20 +12,26 @@ class TestRomanNumerals < Minitest::Test
 	################################
 
 	def test_is_number_true
+		#Arrange
 		input = '2'
-
+		#Act
 		result = @roman.is_number?(input)
-
+		#Assert
 		assert_equal(true, result)
 	end
 
 	def test_is_number_false
+		#Arrange
 		input = 'II'
-
+		#Act
 		result = @roman.is_number?(input)
-
+		#Assert
 		assert_equal(false, result)
 	end
+
+	#############################
+	# validate input test cases #
+	#############################
 
 	######################################
 	# convert arabic to roman test cases #
@@ -168,6 +174,15 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('XV', result)
 	end
 
+	def test_convert_sixteen_to_roman
+		#Arrange
+		input = '16'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('XVI', result)
+	end
+
 	######################################
 	# convert roman to arabic test cases #
 	######################################
@@ -305,5 +320,23 @@ class TestRomanNumerals < Minitest::Test
 		result = @roman.convert(input)
 		#Assert
 		assert_equal('15', result)
+	end
+
+	def test_convert_roman_sixteen_to_arabic_sixteen
+		#Arrange
+		input = 'XVI'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('16', result)
+	end
+
+	def test_convert_roman_124_to_arabic_124
+		#Arrange
+		input = 'CXXIV'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('124', result)
 	end
 end
