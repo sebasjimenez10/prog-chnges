@@ -18,4 +18,14 @@ class TestRomanNumerals < Minitest::Test
 
 	end
 
+	def test_convert_roman_one_to_arabic_one
+		#Arrange
+		input = 'I'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('1', result)
+
+	end
+
 end
