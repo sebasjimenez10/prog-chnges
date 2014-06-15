@@ -43,6 +43,24 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('II', result)
 	end
 
+	def test_convert_three_to_roman
+		#Arrange
+		input = '3'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('III', result)
+	end
+
+	def test_convert_three_to_roman
+		#Arrange
+		input = '4'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('IV', result)
+	end
+
 	def test_convert_roman_one_to_arabic_one
 		#Arrange
 		input = 'I'
@@ -50,7 +68,6 @@ class TestRomanNumerals < Minitest::Test
 		result = @roman.convert(input)
 		#Assert
 		assert_equal('1', result)
-
 	end
 
 	def test_convert_roman_two_to_arabic_two
@@ -60,7 +77,23 @@ class TestRomanNumerals < Minitest::Test
 		result = @roman.convert(input)
 		#Assert
 		assert_equal('2', result)
-
 	end
 
+	def test_convert_roman_three_to_arabic_three
+		#Arrange
+		input = 'III'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('3', result)
+	end
+
+	def test_convert_roman_four_to_arabic_four
+		#Arrange
+		input = 'IV'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('4', result)
+	end
 end

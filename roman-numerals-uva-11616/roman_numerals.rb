@@ -2,20 +2,18 @@ class RomanNumerals
 
 	def convert input
 
+		roman_symbols = [ 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X' ]
+
 		if is_number?(input) then
 			integer = Integer(input)
-			if integer == 1 then
-				'I'
-			elsif integer == 2 then
-				'II'
-			end
+			roman_symbols[integer-1]
 				
 		else
-			if input.eql? 'I' then
-				'1'
-			elsif input.eql? 'II' then
-				'2'
+			value = roman_symbols.index(input)
+			if value != nil then
+				(value + 1).to_s
 			end
+
 		end
 	end
 
