@@ -7,6 +7,10 @@ class TestRomanNumerals < Minitest::Test
 		@roman = RomanNumerals.new
 	end
 
+	###########################
+	# is_number? method tests #
+	###########################
+
 	def test_is_number_true
 		input = '2'
 
@@ -22,6 +26,10 @@ class TestRomanNumerals < Minitest::Test
 
 		assert_equal(false, result)
 	end
+
+	######################################
+	# convert arabic to roman test cases #
+	######################################
 
 	def test_covert_one_to_roman
 
@@ -52,7 +60,7 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('III', result)
 	end
 
-	def test_convert_three_to_roman
+	def test_convert_four_to_roman
 		#Arrange
 		input = '4'
 		#Act
@@ -60,6 +68,64 @@ class TestRomanNumerals < Minitest::Test
 		#Assert
 		assert_equal('IV', result)
 	end
+
+	def test_convert_five_to_roman
+		#Arrange
+		input = '5'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('V', result)
+	end
+
+	def test_convert_six_to_roman
+		#Arrange
+		input = '6'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('VI', result)
+	end
+
+	def test_convert_seven_to_roman
+		#Arrange
+		input = '7'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('VII', result)
+	end
+
+	def test_convert_eight_to_roman
+		#Arrange
+		input = '8'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('VIII', result)
+	end
+
+	def test_convert_nine_to_roman
+		#Arrange
+		input = '9'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('IX', result)
+	end
+
+	def test_convert_ten_to_roman
+		#Arrange
+		input = '10'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('X', result)
+	end
+
+	######################################
+	# convert roman to arabic test cases #
+	######################################
 
 	def test_convert_roman_one_to_arabic_one
 		#Arrange
@@ -95,5 +161,59 @@ class TestRomanNumerals < Minitest::Test
 		result = @roman.convert(input)
 		#Assert
 		assert_equal('4', result)
+	end
+
+	def test_convert_roman_five_to_arabic_five
+		#Arrange
+		input = 'V'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('5', result)
+	end
+
+	def test_convert_roman_six_to_arabic_six
+		#Arrange
+		input = 'VI'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('6', result)
+	end
+
+	def test_convert_roman_seven_to_arabic_seven
+		#Arrange
+		input = 'VII'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('7', result)
+	end
+
+	def test_convert_roman_eight_to_arabic_eight
+		#Arrange
+		input = 'VIII'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('8', result)
+	end
+
+	def test_convert_roman_nine_to_arabic_nine
+		#Arrange
+		input = 'IX'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('9', result)
+	end
+
+	def test_convert_roman_ten_to_arabic_ten
+		#Arrange
+		input = 'X'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('10', result)
 	end
 end
