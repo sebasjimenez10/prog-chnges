@@ -132,6 +132,15 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('XI', result)
 	end
 
+	def test_convert_ten_to_roman
+		#Arrange
+		input = '12'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('XII', result)
+	end
+
 	######################################
 	# convert roman to arabic test cases #
 	######################################
@@ -233,5 +242,14 @@ class TestRomanNumerals < Minitest::Test
 		result = @roman.convert(input)
 		#Assert
 		assert_equal('11', result)
+	end
+
+	def test_convert_roman_eleven_to_arabic_eleven
+		#Arrange
+		input = 'XII'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('12', result)
 	end
 end
