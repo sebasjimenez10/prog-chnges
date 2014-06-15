@@ -28,4 +28,13 @@ class TestRomanNumerals < Minitest::Test
 
 	end
 
+	def test_convert_two_to_roman
+		#Arrange
+		input = '2'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('II', result)
+	end
+
 end
