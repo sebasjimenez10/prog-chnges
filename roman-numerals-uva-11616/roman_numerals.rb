@@ -2,7 +2,7 @@ class RomanNumerals
 
 	def convert input
 
-		roman_symbols = [ 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII' ]
+		roman_symbols = [ 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV' ]
 
 		if is_number?(input) then
 			integer = Integer(input)

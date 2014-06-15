@@ -123,7 +123,7 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('X', result)
 	end
 
-	def test_convert_ten_to_roman
+	def test_convert_eleven_to_roman
 		#Arrange
 		input = '11'
 		#Act
@@ -132,13 +132,40 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('XI', result)
 	end
 
-	def test_convert_ten_to_roman
+	def test_convert_twelve_to_roman
 		#Arrange
 		input = '12'
 		#Act
 		result = @roman.convert(input)
 		#Assert
 		assert_equal('XII', result)
+	end
+
+	def test_convert_thirteen_to_roman
+		#Arrange
+		input = '13'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('XIII', result)
+	end
+
+	def test_convert_fourteen_to_roman
+		#Arrange
+		input = '14'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('XIV', result)
+	end
+
+	def test_convert_fifteen_to_roman
+		#Arrange
+		input = '15'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('XV', result)
 	end
 
 	######################################
@@ -244,12 +271,39 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('11', result)
 	end
 
-	def test_convert_roman_eleven_to_arabic_eleven
+	def test_convert_roman_twelve_to_arabic_twelve
 		#Arrange
 		input = 'XII'
 		#Act
 		result = @roman.convert(input)
 		#Assert
 		assert_equal('12', result)
+	end
+
+	def test_convert_roman_thriteen_to_arabic_thirteen
+		#Arrange
+		input = 'XIII'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('13', result)
+	end
+
+	def test_convert_roman_fourteen_to_arabic_fourteen
+		#Arrange
+		input = 'XIV'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('14', result)
+	end
+
+	def test_convert_roman_fifteen_to_arabic_fifteen
+		#Arrange
+		input = 'XV'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('15', result)
 	end
 end
