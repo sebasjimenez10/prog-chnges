@@ -7,7 +7,10 @@ class RomanNumerals
 			'1'
 		elsif input.eql? '2' then
 			'II'
+		elsif input.eql? 'II' then
+			'2'
 		end
+			
 	end
 
 end

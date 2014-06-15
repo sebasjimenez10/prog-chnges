@@ -37,4 +37,14 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('II', result)
 	end
 
+	def test_convert_roman_two_to_arabic_two
+		#Arrange
+		input = 'II'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('2', result)
+
+	end
+
 end
