@@ -1,16 +1,31 @@
 class RomanNumerals
 
 	def convert input
-		if input.eql? '1' then
-			'I'
-		elsif input.eql? 'I' then
-			'1'
-		elsif input.eql? '2' then
-			'II'
-		elsif input.eql? 'II' then
-			'2'
+
+		if is_number?(input) then
+			integer = Integer(input)
+			if integer == 1 then
+				'I'
+			elsif integer == 2 then
+				'II'
+			end
+				
+		else
+			if input.eql? 'I' then
+				'1'
+			elsif input.eql? 'II' then
+				'2'
+			end
 		end
-			
+	end
+
+	def is_number? input
+		
+		Integer(input)
+		true
+	rescue ArgumentError
+		false
+
 	end
 
 end
