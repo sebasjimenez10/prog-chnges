@@ -7,9 +7,9 @@ class TestRomanNumerals < Minitest::Test
 		@roman = RomanNumerals.new
 	end
 
-	###########################
-	# is_number? method tests #
-	###########################
+	################################
+	# is_number? method test cases #
+	################################
 
 	def test_is_number_true
 		input = '2'
@@ -123,6 +123,15 @@ class TestRomanNumerals < Minitest::Test
 		assert_equal('X', result)
 	end
 
+	def test_convert_ten_to_roman
+		#Arrange
+		input = '11'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('XI', result)
+	end
+
 	######################################
 	# convert roman to arabic test cases #
 	######################################
@@ -215,5 +224,14 @@ class TestRomanNumerals < Minitest::Test
 		result = @roman.convert(input)
 		#Assert
 		assert_equal('10', result)
+	end
+
+	def test_convert_roman_eleven_to_arabic_eleven
+		#Arrange
+		input = 'XI'
+		#Act
+		result = @roman.convert(input)
+		#Assert
+		assert_equal('11', result)
 	end
 end
