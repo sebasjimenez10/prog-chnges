@@ -1,7 +1,7 @@
 Programming Challenges in Ruby!
 ---
 
-** Description: **
+**Description:**
 
 
 I'll use this space to share some solution to programming challenges resolved using ruby language.
@@ -11,4 +11,4 @@ Hopefully this will get bigger and bigger.
 
 I will also put a description of the challenge in every solution.
 
-*** Enjoy! ***
+**Enjoy!**
