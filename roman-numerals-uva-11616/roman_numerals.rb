@@ -35,7 +35,7 @@ class RomanNumerals
 				if dn != 0 then
 
 					if @@roman_symbols.key(dn) != nil then
-					
+						
 						answer.concat( @@roman_symbols.key(dn).to_s )
 					elsif @@unique_combinations.key(dn) != nil then
 						
