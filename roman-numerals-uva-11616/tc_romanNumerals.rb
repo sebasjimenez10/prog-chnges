@@ -101,6 +101,26 @@ class TestRomanNumerals < Minitest::Test
 		generic_fn_roman_numerals( '16', 'XVI' )
 	end
 
+	def test_convert_45_to_roman
+		generic_fn_roman_numerals( '45', 'XLV' )
+	end
+
+	def test_convert_1000_to_roman
+		generic_fn_roman_numerals( '1000', 'M' )
+	end
+
+	def test_convert_1025_to_roman
+		generic_fn_roman_numerals( '1025', 'MXXV' )
+	end
+
+	def test_convert_1325_to_roman
+		generic_fn_roman_numerals( '1325', 'MCCCXXV' )
+	end
+
+	def test_convert_942_to_roman
+		generic_fn_roman_numerals( '942', 'CMXLII' )
+	end
+
 	######################################
 	# convert roman to arabic test cases #
 	######################################
@@ -171,6 +191,10 @@ class TestRomanNumerals < Minitest::Test
 
 	def test_convert_roman_124_to_arabic_124
 		generic_fn_roman_numerals( 'CXXIV', '124' )
+	end
+
+	def test_convert_roman_1983_to_arabic_1983
+		generic_fn_roman_numerals( 'MCMLXXXIII', '1983' )
 	end
 
 	###########################################

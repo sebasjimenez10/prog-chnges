@@ -48,11 +48,12 @@ class RomanNumerals
 
 								answer.concat( @@roman_symbols.key( value ).to_s )
 
-								(dn - value).times do | i |
+								aux = value
+								while (aux < dn) do
 									answer.concat( @@roman_symbols.key( @@sums_to_right[value] ).to_s )
+									aux = aux + @@sums_to_right[value]
 								end
 								break
-
 							end	
 						end
 					end
