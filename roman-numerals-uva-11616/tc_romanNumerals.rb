@@ -38,149 +38,67 @@ class TestRomanNumerals < Minitest::Test
 	######################################
 
 	def test_covert_one_to_roman
-
-		#Arrange
-		input = '1'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('I', result)
-
+		generic_fn_roman_numerals( '1', 'I' )
 	end
 
 	def test_convert_two_to_roman
-		#Arrange
-		input = '2'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('II', result)
+		generic_fn_roman_numerals( '2', 'II' )
 	end
 
 	def test_convert_three_to_roman
-		#Arrange
-		input = '3'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('III', result)
+		generic_fn_roman_numerals( '3', 'III' )
 	end
 
 	def test_convert_four_to_roman
-		#Arrange
-		input = '4'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('IV', result)
+		generic_fn_roman_numerals( '4', 'IV' )
 	end
 
 	def test_convert_five_to_roman
-		#Arrange
-		input = '5'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('V', result)
+		generic_fn_roman_numerals( '5', 'V' )
 	end
 
 	def test_convert_six_to_roman
-		#Arrange
-		input = '6'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('VI', result)
+		generic_fn_roman_numerals( '6', 'VI' )
 	end
 
 	def test_convert_seven_to_roman
-		#Arrange
-		input = '7'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('VII', result)
+		generic_fn_roman_numerals( '7', 'VII' )
 	end
 
 	def test_convert_eight_to_roman
-		#Arrange
-		input = '8'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('VIII', result)
+		generic_fn_roman_numerals( '8', 'VIII' )
 	end
 
 	def test_convert_nine_to_roman
-		#Arrange
-		input = '9'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('IX', result)
+		generic_fn_roman_numerals( '9', 'IX' )
 	end
 
 	def test_convert_ten_to_roman
-		#Arrange
-		input = '10'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('X', result)
+		generic_fn_roman_numerals( '10', 'X' )
 	end
 
 	def test_convert_eleven_to_roman
-		#Arrange
-		input = '11'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('XI', result)
+		generic_fn_roman_numerals( '11', 'XI' )
 	end
 
 	def test_convert_twelve_to_roman
-		#Arrange
-		input = '12'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('XII', result)
+		generic_fn_roman_numerals( '12', 'XII' )
 	end
 
 	def test_convert_thirteen_to_roman
-		#Arrange
-		input = '13'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('XIII', result)
+		generic_fn_roman_numerals( '13', 'XIII' )
 	end
 
 	def test_convert_fourteen_to_roman
-		#Arrange
-		input = '14'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('XIV', result)
+		generic_fn_roman_numerals( '14', 'XIV' )
 	end
 
 	def test_convert_fifteen_to_roman
-		#Arrange
-		input = '15'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('XV', result)
+		generic_fn_roman_numerals( '15', 'XV' )
 	end
 
 	def test_convert_sixteen_to_roman
-		#Arrange
-		input = '16'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('XVI', result)
+		generic_fn_roman_numerals( '16', 'XVI' )
 	end
 
 	######################################
@@ -188,155 +106,84 @@ class TestRomanNumerals < Minitest::Test
 	######################################
 
 	def test_convert_roman_one_to_arabic_one
-		#Arrange
-		input = 'I'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('1', result)
+		generic_fn_roman_numerals( 'I', '1' )
 	end
 
 	def test_convert_roman_two_to_arabic_two
-		#Arrange
-		input = 'II'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('2', result)
+		generic_fn_roman_numerals( 'II', '2' )
 	end
 
 	def test_convert_roman_three_to_arabic_three
-		#Arrange
-		input = 'III'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('3', result)
+		generic_fn_roman_numerals( 'III', '3' )
 	end
 
 	def test_convert_roman_four_to_arabic_four
-		#Arrange
-		input = 'IV'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('4', result)
+		generic_fn_roman_numerals( 'IV', '4' )
 	end
 
 	def test_convert_roman_five_to_arabic_five
-		#Arrange
-		input = 'V'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('5', result)
+		generic_fn_roman_numerals( 'V', '5' )
 	end
 
 	def test_convert_roman_six_to_arabic_six
-		#Arrange
-		input = 'VI'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('6', result)
+		generic_fn_roman_numerals( 'VI', '6' )
 	end
 
 	def test_convert_roman_seven_to_arabic_seven
-		#Arrange
-		input = 'VII'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('7', result)
+		generic_fn_roman_numerals( 'VII', '7' )
 	end
 
 	def test_convert_roman_eight_to_arabic_eight
-		#Arrange
-		input = 'VIII'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('8', result)
+		generic_fn_roman_numerals( 'VIII', '8' )
 	end
 
 	def test_convert_roman_nine_to_arabic_nine
-		#Arrange
-		input = 'IX'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('9', result)
+		generic_fn_roman_numerals( 'IX', '9' )
 	end
 
 	def test_convert_roman_ten_to_arabic_ten
-		#Arrange
-		input = 'X'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('10', result)
+		generic_fn_roman_numerals( 'X', '10' )
 	end
 
 	def test_convert_roman_eleven_to_arabic_eleven
-		#Arrange
-		input = 'XI'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('11', result)
+		generic_fn_roman_numerals( 'XI', '11' )
 	end
 
 	def test_convert_roman_twelve_to_arabic_twelve
-		#Arrange
-		input = 'XII'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('12', result)
+		generic_fn_roman_numerals( 'XII', '12' )
 	end
 
 	def test_convert_roman_thriteen_to_arabic_thirteen
-		#Arrange
-		input = 'XIII'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('13', result)
+		generic_fn_roman_numerals( 'XIII', '13' )
 	end
 
 	def test_convert_roman_fourteen_to_arabic_fourteen
-		#Arrange
-		input = 'XIV'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('14', result)
+		generic_fn_roman_numerals( 'XIV', '14' )
 	end
 
 	def test_convert_roman_fifteen_to_arabic_fifteen
-		#Arrange
-		input = 'XV'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('15', result)
+		generic_fn_roman_numerals( 'XV', '15' )
 	end
 
 	def test_convert_roman_sixteen_to_arabic_sixteen
-		#Arrange
-		input = 'XVI'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('16', result)
+		generic_fn_roman_numerals( 'XVI', '16' )
 	end
 
 	def test_convert_roman_124_to_arabic_124
-		#Arrange
-		input = 'CXXIV'
-		#Act
-		result = @roman.convert(input)
-		#Assert
-		assert_equal('124', result)
+		generic_fn_roman_numerals( 'CXXIV', '124' )
 	end
+
+	###########################################
+	# Generic function to call roman numerals #
+	###########################################
+
+	def generic_fn_roman_numerals(input, expected)
+		#Arrange
+		#This step is not longer used because the input comes as parameter
+		#Act
+		result = @roman.convert( input )
+		#Assert
+		assert_equal(expected, result)
+	end
+
 end
