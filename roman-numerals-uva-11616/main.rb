@@ -18,16 +18,16 @@ results = Array.new
 
 
 while( line = inputFile.gets )
-	
-	puts "Input line: ".concat( line )
+  
+  puts "Input line: ".concat( line )
 
-	outputLine = rn.convert( line.chomp )
-	outputFile.puts( outputLine )
+  outputLine = rn.convert( line.chomp )
+  outputFile.puts( outputLine )
 
-	results.push( outputLine )
+  results.push( outputLine )
 
 end
 
 results.each do | r |
-	puts "Output line: ".concat( r )
+  puts "Output line: ".concat( r )
 end
