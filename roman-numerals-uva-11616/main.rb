@@ -28,6 +28,8 @@ while( line = inputFile.gets )
 
 end
 
+outputFile.close
+
 results.each do | r |
   puts "Output line: ".concat( r )
 end
